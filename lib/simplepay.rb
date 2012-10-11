@@ -16,8 +16,7 @@ rescue LoadError
 end
 
 module Simplepay
-  
-  VERSION = '0.2.3' unless const_defined?(:VERSION)
+  VERSION = '0.2.3.1' unless const_defined?(:VERSION)
 
   mattr_accessor :aws_access_key_id
   @@aws_access_key_id = '' 
@@ -25,6 +24,12 @@ module Simplepay
   @@aws_secret_access_key = ''  
   mattr_accessor :use_sandbox
   @@use_sandbox = true
+
+  
+  @@aws_secret_access_key = ''
+  mattr_accessor :account_id
+     
+  @@account_id = ''
 
   def self.use_sandbox?
     @@use_sandbox
