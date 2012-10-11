@@ -37,7 +37,7 @@ module Simplepay
     class Standard < Service
 
       required_field :access_key
-      required_field :account_id
+      required_field :account_id, :as => :amazon_payments_account_id
       required_field :amount
       required_field :description
       required_field :signature
